@@ -42,6 +42,7 @@ app.get("/api/cities", async (req, res) => {
         units: "imperial",
       });
       const url = `https://api.openweathermap.org/data/2.5/weather?${params}`;
+    
       console.log(url);
       const response = await fetch(url);
       const data = await response.json();
