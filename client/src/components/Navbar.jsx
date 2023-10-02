@@ -11,12 +11,11 @@ function MyNavBar(props) {
           <Navbar.Brand href="/">
             <img
               src={Logo}
-              height="30"
-              className="d-lg-inline-block"
+              height="20"
+              className="inline-block"
               alt="React Bootstrap logo"
             />
           </Navbar.Brand>
-          <Nav.Link>Your Link</Nav.Link>
           <Navbar.Toggle />
           <Navbar.Collapse className="justify-content-end">
             <Navbar.Text>
