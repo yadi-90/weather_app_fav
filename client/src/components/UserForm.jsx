@@ -63,7 +63,7 @@ const UserForm = ({ addCity, editingCity, afterCityUpdate, onEdit }) => {
   //A function to handle the put (update) request
   const putCity = (cityToEdit) => {
     console.log("test");
-    return fetch(`http://localhost:8000/api/user/${cityToEdit.user_id}`, {
+    return fetch(`http://localhost:8001/api/user/${cityToEdit.user_id}`, {
       method: "PUT",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(cityToEdit),
@@ -86,7 +86,7 @@ const UserForm = ({ addCity, editingCity, afterCityUpdate, onEdit }) => {
     temp.state_code = city.state_code.toUpperCase();
     try {
       const response = await fetch(
-        `http://localhost:8000/api/weather?username=${temp.username}&fav_city=${temp.fav_city}&state_code=${temp.state_code}`
+        `http://localhost:8001/api/weather?username=${temp.username}&fav_city=${temp.fav_city}&state_code=${temp.state_code}`
       );
       const data = await response.json();
       setWeatherData(data);
