@@ -12,7 +12,7 @@ const ListCities = () => {
 
   // A function to fetch the list of contacts that will be load anytime that list change
   const loadCities = () => {
-    fetch("http://localhost:8080/api/cities")
+    fetch("http://localhost:8000/api/cities")
       .then((response) => response.json())
       .then((cities) => {
         setCities(cities);
@@ -34,7 +34,7 @@ const ListCities = () => {
 
   //A function to handle the Delete funtionality
   const handleDelete = (user_id) => {
-    return fetch(`http://localhost:8080/api/user/${user_id}`, {
+    return fetch(`http://localhost:8000/api/user/${user_id}`, {
       method: "DELETE",
     }).then((response) => {
       console.log(response);
