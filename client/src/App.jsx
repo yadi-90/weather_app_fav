@@ -6,6 +6,9 @@ function App() {
 
   return (
     <>
+    <div>
+      <h1> Hello from the front</h1>
+    </div>
     </>
   )
 }
