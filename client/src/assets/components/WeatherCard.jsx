@@ -45,4 +45,4 @@ const WeatherCard = ({ weatherData, state_code }) => {
     );
   };
   
-  export default WeatherCard; 
+  export default WeatherCard;
