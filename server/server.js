@@ -11,7 +11,7 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
-const PORT= process.env.PORT || 8000;
+const PORT= process.env.PORT || 8001;
 
 
 
@@ -20,9 +20,9 @@ app.get('/',(req,res) => {
     res.json({message:'Hello from my server'})
 });
 // get all the favorite cities that are saved for a user
-app.get("/api/cities", async (req, res) => {
+app.get("http://localhost:8001/api/cities", async (req, res) => {
     try {
-      const { rows: users } = await db.query("SELECT * FROM users");
+      const { rows: users } = await db.query("SELECT * FROM public.users");
       res.json(users);
     } catch (e) {
       return res.status(400).json({ e });
